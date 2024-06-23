@@ -166,6 +166,11 @@ class DirectoryManager(QWidget):
         openVscAction.setIcon(QIcon("./assets/icon/vscode.svg"))
         openVscAction.triggered.connect(lambda: self.openInVsc(item_data))
 
+        if '.py' in item_data['path'] or 'pycharm' in item_data['tags'].lower():
+            pyCharmAction = menu.addAction("Pycharm")
+            pyCharmAction.setIcon(QIcon("./assets/icon/pycharm.svg"))
+            pyCharmAction.triggered.connect(lambda: self.open_with_pycharm(item_data))
+
         if is_file:
             exeAction = menu.addAction("start")
             exeAction.setIcon(QIcon("./assets/icon/start.svg"))
@@ -201,6 +206,17 @@ class DirectoryManager(QWidget):
             subprocess.run([vscode_path, '-r', path])
         else:
             print(f"路径 {path} 不存在或不是一个文件/目录")
+
+    def open_with_pycharm(self, item_data):
+        path = item_data['path']
+        # 设置 PyCharm 的可执行文件路径
+        pycharm_path = '"D:\\apps\\PyCharm 2024.1.2\\bin\\pycharm64.exe"'  # 修改为你的 PyCharm 安装路径
+
+        # 检查路径是否存在
+        if os.path.exists(path):
+            subprocess.run([pycharm_path, path])
+        else:
+            print(f"路径 {path} 不存在")
 
     def del_file(self, item_data):
         reply = QMessageBox.question(
