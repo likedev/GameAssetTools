@@ -8,6 +8,7 @@ from PySide6.QtCore import Qt, QSize
 from PySide6.QtGui import QIcon, QPixmap, QAction, QFont
 from util import *
 from db.file_manager_dao import *
+from config import *
 
 
 class DirectoryManager(QWidget):
@@ -162,30 +163,33 @@ class DirectoryManager(QWidget):
         openFeAction.setIcon(QIcon("./assets/icon/file_exp.png"))
         openFeAction.triggered.connect(lambda: self.OpenInExplorer(item_data))
 
-        openVscAction = menu.addAction("vscode")
-        openVscAction.setIcon(QIcon("./assets/icon/vscode.svg"))
-        openVscAction.triggered.connect(lambda: self.openInVsc(item_data))
+        tags = item_data['tags']
 
-        if '.py' in item_data['path'] or 'pycharm' in item_data['tags'].lower():
-            pyCharmAction = menu.addAction("Pycharm")
-            pyCharmAction.setIcon(QIcon("./assets/icon/pycharm.svg"))
-            pyCharmAction.triggered.connect(lambda: self.open_with_pycharm(item_data))
+        def match_app():
+            for key in app_info['match_keywords']:
+                if key in tags or key in item_data['path']:
+                    return True
+            return False
 
+        for app_lower, app_info in LOCAL_APP.items():
+            if match_app():
+                open_with_app_action = menu.addAction(app_lower)
+                open_with_app_action.setIcon(QIcon(app_info['icon_path']))
+                open_with_app_action.triggered.connect(lambda: self.open_with_app(item_data, app_lower))
         if is_file:
-            exeAction = menu.addAction("start")
-            exeAction.setIcon(QIcon("./assets/icon/start.svg"))
-            exeAction.triggered.connect(lambda: self.start_file(item_data))
+            exe_action = menu.addAction("start")
+            exe_action.setIcon(QIcon("./assets/icon/start.svg"))
+            exe_action.triggered.connect(lambda: self.start_file(item_data))
 
         menu.addSeparator()
-
-        editAction = menu.addAction("Edit File Config")
-        editAction.setIcon(QIcon("./assets/icon/edit.svg"))
-        editAction.triggered.connect(lambda: self.showAddFileDialog(item_data))
+        edit_action = menu.addAction("Edit File Config")
+        edit_action.setIcon(QIcon("./assets/icon/edit.svg"))
+        edit_action.triggered.connect(lambda: self.showAddFileDialog(item_data))
 
         # //删除按钮
-        delAction = menu.addAction("Delete")
-        delAction.setIcon(QIcon("./assets/icon/del.svg"))
-        delAction.triggered.connect(lambda: self.del_file(item_data))
+        del_action = menu.addAction("Delete")
+        del_action.setIcon(QIcon("./assets/icon/del.svg"))
+        del_action.triggered.connect(lambda: self.del_file(item_data))
 
         menu.exec_(self.fileList.mapToGlobal(position))
 
@@ -194,28 +198,17 @@ class DirectoryManager(QWidget):
         if os.path.isfile(project_path):
             os.startfile(project_path)
 
-    def openInVsc(self, item_data):
-        # 获取 VS Code 的安装路径，如果 VS Code 已添加到系统 PATH 中，可以直接使用 'code'
-        vscode_path = 'D:\\apps\\Microsoft VS Code\\Code.exe'
-        path = item_data['path']
-        # 如果路径是一个目录
-        if os.path.isdir(path):
-            subprocess.run([vscode_path, path])
-        # 如果路径是一个文件
-        elif os.path.isfile(path):
-            subprocess.run([vscode_path, '-r', path])
-        else:
-            print(f"路径 {path} 不存在或不是一个文件/目录")
-
-    def open_with_pycharm(self, item_data):
+    def open_with_app(self, item_data, open_app):
         path = item_data['path']
         # 设置 PyCharm 的可执行文件路径
-        pycharm_path = '"D:\\apps\\PyCharm 2024.1.2\\bin\\pycharm64.exe"'  # 修改为你的 PyCharm 安装路径
-
+        app_info = LOCAL_APP.get(open_app)
+        if not app_info:
+            QMessageBox.warning("找不到 APP", "找不到对应的 " + open_app)
         # 检查路径是否存在
-        if os.path.exists(path):
-            subprocess.run([pycharm_path, path])
+        if os.path.exists(app_info['exe_path']):
+            subprocess.run(['"%s"' % app_info['exe_path'], path])
         else:
+            QMessageBox.warning("路径错误", "找不到对应的路径 " + app_info['exe_path'])
             print(f"路径 {path} 不存在")
 
     def del_file(self, item_data):
@@ -315,7 +308,7 @@ class DirectoryManager(QWidget):
             item.setFont(QFont('Arial', 15))
             set_item_data(item, file)
 
-            item_icon = get_icon_by_extension(file['path'])
+            item_icon = get_icon_by_fileinfo(file)
             item.setIcon(item_icon)
 
             self.fileList.addItem(item)

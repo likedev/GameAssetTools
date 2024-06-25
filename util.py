@@ -1,14 +1,8 @@
 import os
-
-import win32com
-import win32gui
 from PySide6.QtCore import Qt
 import copy
-
+from config import *
 from PySide6.QtGui import QIcon, QPixmap
-import win32api
-from win32con import LR_DEFAULTSIZE, LR_LOADFROMFILE
-import win32ui
 
 
 def set_item_data(item, data):
@@ -28,7 +22,9 @@ def get_file_extension(filename):
     return ext
 
 
-def get_icon_by_extension(file_path):
+def get_icon_by_fileinfo(file):
+    file_path = file['path']
+
     svg_icon_set = ['txt', 'py', 'pdf', 'psd', 'folder', 'obj',
                     'fbx', 'blend', 'zpr', 'ztl', 'hip', 'zprg', 'zip', '7z', 'uproject']
     png_icon_set = ['abc']
@@ -43,14 +39,20 @@ def get_icon_by_extension(file_path):
             return './assets/icon/' + ext + '.png'
         return './assets/icon/default.svg'
 
-    _, ext = os.path.splitext(file_path)
-    ext = ext.lower()  # 确保扩展名小写以匹配映射表
-    if ext in icon_cache:
-        return icon_cache[ext]  # 如果已缓存，直接返回
+    def get_folder_icon_path():
+        for app_tag in ['pycharm', 'idea']:
+            if app_tag in file['tags']:
+                return LOCAL_APP[app_tag]['icon_path']
+        return './assets/icon/folder.svg'
+
+    path_name, ext = os.path.splitext(file_path)
+
+    if file_path in icon_cache:
+        return icon_cache[file_path]  # 如果已缓存，直接返回
     if os.path.isdir(file_path):
-        icon_path = './assets/icon/folder.svg'
+        icon_path = get_folder_icon_path()
     else:
         icon_path = get_ext_path(ext)
     icon = QIcon(icon_path)  # 创建 QIcon 对象
-    icon_cache[ext] = icon  # 缓存图标
+    icon_cache[file_path] = icon  # 缓存图标
     return icon
