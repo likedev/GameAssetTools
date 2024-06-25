@@ -14,4 +14,7 @@ LOCAL_APP = {
         "icon_path": "./assets/icon/vscode.svg",
         "match_keywords": ["vscode", "code"]
     },
+    "blender36": {
+        "exe_path": "C:\\Program Files\\Blender\\Blender.exe",
+    }
 }
