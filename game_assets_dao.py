@@ -22,11 +22,11 @@ def insert_row(data):
     query = sql.SQL("""
         INSERT INTO game_assets (
             title, file_path, web_url, software, file_type, note, keywords,
-            meta, score, ctime, file_extension, src, price, license,pics
+            meta, score, ctime, file_extension, src, price, license,pics,pics_local,preview
         ) VALUES (
             %(title)s, %(file_path)s, %(web_url)s, %(software)s, %(file_type)s, 
             %(note)s, %(keywords)s, %(meta)s, %(score)s, %(ctime)s, 
-            %(file_extension)s, %(src)s, %(price)s, %(license)s,%(pics)s
+            %(file_extension)s, %(src)s, %(price)s, %(license)s,%(pics)s,%(pics_local)s,%(preview)s
         )
     """)
     # 执行插入语句
@@ -56,11 +56,11 @@ def query(sql_str):
     # 将结果转换为普通的字典列表（可选）
     rows_as_dicts = [dict(row) for row in rows]
     for t in rows_as_dicts:
-        if t['pics_local']:
+        if t['pics_local'] and not t['preview']:
             t['pics_local'] = [const.IMG_CACHE_BASE_URL + t for t in t['pics_local']]
             t['preview'] = t['pics_local'][0]
     return rows_as_dicts
 
-# if __name__ == '__main__':
-#     data = query("SELECT * FROM game_assets")
-#     print(data)
+
+if __name__ == '__main__':
+    pass

@@ -15,7 +15,7 @@ class MainApplication(QMainWindow):
         self.initUI()
 
     def initUI(self):
-        self.setWindowIcon(QIcon("D:/code/py/GameAssetsTools/assets/find.svg"))
+        self.setWindowIcon(QIcon("./assets/find.svg"))
         # Main widget
         mainWidget = QWidget()
 

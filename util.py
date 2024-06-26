@@ -3,6 +3,19 @@ from PySide6.QtCore import Qt
 import copy
 from config import *
 from PySide6.QtGui import QIcon, QPixmap
+import subprocess
+
+
+def open_file_or_dir_in_explorer(path):
+    if os.path.exists(path):
+        if os.path.isdir(path):
+            # 如果是目录，直接打开这个目录
+            subprocess.run(['explorer', os.path.normpath(path)])
+        else:
+            # 如果是文件，打开文件所在目录并选中这个文件
+            subprocess.run(['explorer', '/select,', os.path.normpath(path)])
+        return True
+    return False
 
 
 def set_item_data(item, data):
@@ -56,3 +69,13 @@ def get_icon_by_fileinfo(file):
     icon = QIcon(icon_path)  # 创建 QIcon 对象
     icon_cache[file_path] = icon  # 缓存图标
     return icon
+
+
+pic_types_ext = ['png', 'jpg', 'jpeg', 'gif', 'bmp', 'tif', 'tiff', 'svg', 'webp']
+
+
+def is_pic_by_ext(ext_p):
+    for ext in pic_types_ext:
+        if ext in ext_p.lower():
+            return True
+    return False

@@ -10,26 +10,38 @@ from PySide6.QtGui import QPixmap, QIcon
 
 import game_assets_dao
 import search
+from util import open_file_or_dir_in_explorer
 
 
 class AssetManager(QWidget):
     def __init__(self):
         super().__init__()
+        self.search_layout_height = 40
         self.initUI()
 
     def initUI(self):
 
+        self.clearSearchButton = QPushButton(self)
+        self.clearSearchButton.setIcon(QIcon("./assets/icon/clear.svg"))
+        self.clearSearchButton.setFixedSize(QSize(self.search_layout_height, self.search_layout_height))
+        self.clearSearchButton.clicked.connect(self.clearSearch)
+
         self.searchBar = QLineEdit(self)
+        self.searchBar.setFixedHeight(self.search_layout_height)
         self.searchBar.returnPressed.connect(self.onSearch)
 
-        self.searchButton = QPushButton("搜索", self)
+        self.searchButton = QPushButton(self)
+        self.searchButton.setIcon(QIcon("./assets/icon/search.svg"))
+        self.searchButton.setFixedSize(QSize(self.search_layout_height, self.search_layout_height))
         self.searchButton.clicked.connect(self.onSearch)
+
+        self.listViewButton = QPushButton(self)
+        self.listViewButton.setFixedSize(QSize(self.search_layout_height, self.search_layout_height))
+        self.listViewButton.setIcon(QIcon("./assets/icon/displaymode.svg"))
+        self.listViewButton.clicked.connect(lambda: self.toggleDisplayMode())
 
         self.tags = ["模型", "贴图", "材质"]
         self.checkboxes = [QCheckBox(tag, self) for tag in self.tags]
-
-        self.listViewButton = QPushButton('展示', self)
-        self.listViewButton.clicked.connect(lambda: self.toggleDisplayMode())
 
         self.resultList = QListWidget(self)
         self.resultList.setContextMenuPolicy(Qt.CustomContextMenu)
@@ -46,6 +58,7 @@ class AssetManager(QWidget):
         self.createDetailSection()
 
         topLayout = QHBoxLayout()
+        topLayout.addWidget(self.clearSearchButton)
         topLayout.addWidget(self.searchBar)
         topLayout.addWidget(self.searchButton)
         topLayout.addWidget(self.listViewButton)
@@ -65,6 +78,11 @@ class AssetManager(QWidget):
 
         self.setLayout(mainLayout)
         self.show()
+
+    def clearSearch(self):
+        self.searchBar.clear()
+        self.resultList.clear()
+        self.onSearch()
 
     def createDetailSection(self):
         self.detailLabel = QLabel("资产详情：", self)
@@ -151,10 +169,11 @@ class AssetManager(QWidget):
         current_item = self.resultList.currentItem()
         if current_item:
             item_data = current_item.data(Qt.ItemDataRole.UserRole)
-            if 'path' in item_data:
-                file_path = item_data['path']
-                folder = os.path.dirname(file_path)
-                subprocess.Popen(f'explorer "{folder}"')
+            print("item_data", item_data)
+            if 'file_path' in item_data:
+                file_path = item_data['file_path']
+                if not open_file_or_dir_in_explorer(file_path):
+                    QMessageBox.warning(self, "失败", "目录不存在")
             else:
                 QMessageBox.warning(self, "path 不存在")
         else:
@@ -173,8 +192,8 @@ class AssetManager(QWidget):
             self.resultList.setGridSize(QSize(100, 100))
         else:
             self.resultList.setViewMode(QListWidget.ViewMode.IconMode)
-            self.resultList.setIconSize(QSize(300, 300))
-            self.resultList.setGridSize(QSize(300, 300))
+            self.resultList.setIconSize(QSize(290, 300))
+            self.resultList.setGridSize(QSize(300, 330))
             self.resultList.verticalScrollBar().setSingleStep(40)
 
 
