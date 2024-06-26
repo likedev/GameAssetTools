@@ -10,11 +10,13 @@ LOCAL_APP = {
         "match_keywords": ["idea", ".java"]
     },
     "vscode": {
-        "exe_path": "C:\\Program Files\\Microsoft VS Code\\Code.exe",
+        "exe_path": "D:\\apps\\Microsoft VS Code\\Code.exe",
         "icon_path": "./assets/icon/vscode.svg",
         "match_keywords": ["vscode", "code"]
     },
     "blender36": {
         "exe_path": "C:\\Program Files\\Blender\\Blender.exe",
+        "icon_path": "./assets/icon/blend.svg",
+        "match_keywords": ["blender", "code"]
     }
 }

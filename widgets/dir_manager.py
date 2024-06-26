@@ -1,6 +1,8 @@
 import os
 import subprocess
 import sys
+from functools import partial
+
 from PySide6.QtWidgets import (QApplication, QWidget, QVBoxLayout, QHBoxLayout, QLineEdit, QPushButton, QLabel,
                                QListWidget, QListWidgetItem, QScrollArea, QFileDialog, QDialog, QFormLayout,
                                QMessageBox, QMenu, QDialogButtonBox, QRadioButton, QButtonGroup)
@@ -165,17 +167,21 @@ class DirectoryManager(QWidget):
 
         tags = item_data['tags']
 
-        def match_app():
-            for key in app_info['match_keywords']:
+        def match_app(app_info_):
+            for key in app_info_['match_keywords']:
                 if key in tags or key in item_data['path']:
                     return True
             return False
 
         for app_lower, app_info in LOCAL_APP.items():
-            if match_app():
+            if match_app(app_info):
                 open_with_app_action = menu.addAction(app_lower)
                 open_with_app_action.setIcon(QIcon(app_info['icon_path']))
-                open_with_app_action.triggered.connect(lambda: self.open_with_app(item_data, app_lower))
+                app_lower_p = copy.deepcopy(app_lower)
+                # open_with_app_action.triggered.connect(
+                #     lambda: self.open_with_app(item_data, app_lower_p))
+                open_with_app_action.triggered.connect(
+                    partial(self.open_with_app, item_data, app_lower))
         if is_file:
             exe_action = menu.addAction("start")
             exe_action.setIcon(QIcon("./assets/icon/start.svg"))
@@ -199,14 +205,18 @@ class DirectoryManager(QWidget):
             os.startfile(project_path)
 
     def open_with_app(self, item_data, open_app):
+        print("open_with_app param:", item_data, open_app)
         path = item_data['path']
         # 设置 PyCharm 的可执行文件路径
         app_info = LOCAL_APP.get(open_app)
         if not app_info:
             QMessageBox.warning("找不到 APP", "找不到对应的 " + open_app)
         # 检查路径是否存在
+        print("对应的app", app_info)
         if os.path.exists(app_info['exe_path']):
-            subprocess.run(['"%s"' % app_info['exe_path'], path])
+            cmd = [app_info['exe_path'], path]
+            print("启动命令", cmd)
+            subprocess.run(cmd)
         else:
             QMessageBox.warning("路径错误", "找不到对应的路径 " + app_info['exe_path'])
             print(f"路径 {path} 不存在")
