@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0ef52147-db4b-4572-afed-54ca38b49541" name="Changes" comment="Add a Python file to calculate stock profit based on the input parameters.">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/finance/bao_download.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/finance/download_stock_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/finance/fix_wencai.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/finance/stock_db.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/finance/test_wencai.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/finance/tushare_download.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/finance/wencai.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/houdini/send_file_to_houdini.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finance/cal_profit.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance/cal_profit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finance/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/finance/test.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2aCzMjFUkUVWucNHw3PpbOJjINJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.bao_download.executor": "Run",
+    "Python.baostack_demo1.executor": "Run",
+    "Python.cal_profit.executor": "Run",
+    "Python.dir_manager.executor": "Run",
+    "Python.download_stock_data.executor": "Run",
+    "Python.fix_wencai.executor": "Run",
+    "Python.game_assets_dao.executor": "Run",
+    "Python.image_search.executor": "Run",
+    "Python.import_crawl_gfxcamp.executor": "Run",
+    "Python.import_hairs.executor": "Run",
+    "Python.import_local_mds.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.search.executor": "Run",
+    "Python.stock_db.executor": "Run",
+    "Python.test.executor": "Run",
+    "Python.test_wencai.executor": "Run",
+    "Python.trans_img_cache.executor": "Run",
+    "Python.tushare_download.executor": "Run",
+    "Python.util.executor": "Run",
+    "Python.wencai.executor": "Run",
+    "Python.win.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "F:/code/stock/stock",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.github.blarc.ai.commits.intellij.plugin.settings.AppSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ],
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
+      "PostgreSQL"
+    ]
+  }
+}]]></component>
+  <component name="RunManager" selected="Python.wencai">
+    <configuration name="download_stock_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GameAssetsTools" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/finance" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finance/download_stock_data.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="fix_wencai" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GameAssetsTools" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/finance" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finance/fix_wencai.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="GameAssetsTools" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="stock_db" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GameAssetsTools" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/finance" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finance/stock_db.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_wencai" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GameAssetsTools" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/finance" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finance/test_wencai.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="wencai" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GameAssetsTools" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/finance" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finance/wencai.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.wencai" />
+        <item itemvalue="Python.download_stock_data" />
+        <item itemvalue="Python.test_wencai" />
+        <item itemvalue="Python.fix_wencai" />
+        <item itemvalue="Python.stock_db" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.17011.127" />
+        <option value="bundled-python-sdk-48aec45f0201-7e9c3bbb6e34-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.17011.127" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0ef52147-db4b-4572-afed-54ca38b49541" name="Changes" comment="" />
+      <created>1703837302954</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1703837302954</updated>
+      <workItem from="1703837304288" duration="39743000" />
+      <workItem from="1705059214590" duration="68000" />
+      <workItem from="1706371067338" duration="64000" />
+      <workItem from="1709095657990" duration="2758000" />
+      <workItem from="1712062407456" duration="1194000" />
+      <workItem from="1716130840646" duration="53000" />
+      <workItem from="1716131213968" duration="1159000" />
+      <workItem from="1717319241341" duration="1443000" />
+      <workItem from="1718811527304" duration="53609000" />
+      <workItem from="1719322480658" duration="7645000" />
+      <workItem from="1719333662008" duration="63359000" />
+      <workItem from="1721309294605" duration="36000" />
+      <workItem from="1721469710996" duration="7668000" />
+      <workItem from="1723358731135" duration="4957000" />
+      <workItem from="1723393430930" duration="211000" />
+      <workItem from="1723809520893" duration="167000" />
+      <workItem from="1733691606758" duration="10012000" />
+      <workItem from="1734169531299" duration="757000" />
+      <workItem from="1740404367692" duration="76000" />
+      <workItem from="1748077678179" duration="3069000" />
+      <workItem from="1751784712042" duration="4109000" />
+      <workItem from="1751793451811" duration="21282000" />
+      <workItem from="1753798076661" duration="34866000" />
+    </task>
+    <task id="LOCAL-00001" summary="add">
+      <option name="closed" value="true" />
+      <created>1718975501260</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718975501260</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add file manager">
+      <option name="closed" value="true" />
+      <created>1719039675307</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1719039675307</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add sqls">
+      <option name="closed" value="true" />
+      <created>1719156679708</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1719156679708</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fix win">
+      <option name="closed" value="true" />
+      <created>1719322864074</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719322864074</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fix win">
+      <option name="closed" value="true" />
+      <created>1719361564762</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1719361564762</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add md assets">
+      <option name="closed" value="true" />
+      <created>1719418128621</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1719418128621</updated>
+    </task>
+    <task id="LOCAL-00007" summary="✨ Add finance calculation script&#10;&#10;📈 Add a script to calculate financial data for investment analysis. This script&#10;   computes various metrics such as stock value, loss percentage, total&#10;   investment, and more based on input parameters. The results are displayed in&#10;   a tabular format and saved as an HTML file.&#10;&#10;   The script includes a function to calculate the financial data for a given&#10;   stock price, reduction percentage, additional investment, and doubling factor.&#10;   It iterates through 7 periods, updating the stock price and investment&#10;   accordingly. The calculated metrics are then added to a DataFrame and&#10;   displayed in a tabular format using the tabulate library. The results are&#10;   also saved as an HTML file for further analysis.">
+      <option name="closed" value="true" />
+      <created>1723393607197</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1723393607197</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="add" />
+    <MESSAGE value="add file manager" />
+    <MESSAGE value="add sqls" />
+    <MESSAGE value="fix win" />
+    <MESSAGE value="add md assets" />
+    <MESSAGE value="✨ Add finance calculation script&#10;&#10; Add a script to calculate financial data for investment analysis. This script&#10;   computes various metrics such as stock value, loss percentage, total&#10;   investment, and more based on input parameters. The results are displayed in&#10;   a tabular format and saved as an HTML file.&#10;&#10;   The script includes a function to calculate the financial data for a given&#10;   stock price, reduction percentage, additional investment, and doubling factor.&#10;   It iterates through 7 periods, updating the stock price and investment&#10;   accordingly. The calculated metrics are then added to a DataFrame and&#10;   displayed in a tabular format using the tabulate library. The results are&#10;   also saved as an HTML file for further analysis." />
+    <MESSAGE value="Add a Python file to calculate stock profit based on the input parameters." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add a Python file to calculate stock profit based on the input parameters." />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/GameAssetsTools$import_crawl_gfxcamp.coverage" NAME="import_crawl_gfxcamp Coverage Results" MODIFIED="1703908083896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/GameAssetsTools$stock_db.coverage" NAME="stock_db Coverage Results" MODIFIED="1753874586384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finance" />
+    <SUITE FILE_PATH="coverage/GameAssetsTools$import_local_mds.coverage" NAME="import_local_mds Coverage Results" MODIFIED="1719412185779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/GameAssetsTools$search.coverage" NAME="search Coverage Results" MODIFIED="1703917903925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GameAssetsTools$dir_manager.coverage" NAME="dir_manager Coverage Results" MODIFIED="1718990838325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/widgets" />
+    <SUITE FILE_PATH="coverage/GameAssetsTools$test_wencai.coverage" NAME="test_wencai Coverage Results" MODIFIED="1753945206455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finance" />
+    <SUITE FILE_PATH="coverage/GameAssetsTools$wencai.coverage" NAME="wencai Coverage Results" MODIFIED="1753960167722" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finance" />
+    <SUITE FILE_PATH="coverage/GameAssetsTools$fix_wencai.coverage" NAME="fix_wencai Coverage Results" MODIFIED="1753939097821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finance" />
+    <SUITE FILE_PATH="coverage/GameAssetsTools$main.coverage" NAME="main Coverage Results" MODIFIED="1734169536813" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GameAssetsTools$tushare_download.coverage" NAME="tushare_download Coverage Results" MODIFIED="1751799104460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finance" />
+    <SUITE FILE_PATH="coverage/GameAssetsTools$win.coverage" NAME="win Coverage Results" MODIFIED="1719323147716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GameAssetsTools$cal_profit.coverage" NAME="cal_profit Coverage Results" MODIFIED="1751811291364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finance" />
+    <SUITE FILE_PATH="coverage/GameAssetsTools$trans_img_cache.coverage" NAME="trans_img_cache Coverage Results" MODIFIED="1703908309887" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/GameAssetsTools$baostack_demo1.coverage" NAME="baostack_demo1 Coverage Results" MODIFIED="1723371100689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finance" />
+    <SUITE FILE_PATH="coverage/GameAssetsTools$download_stock_data.coverage" NAME="download_stock_data Coverage Results" MODIFIED="1753960140356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finance" />
+    <SUITE FILE_PATH="coverage/GameAssetsTools$util.coverage" NAME="util Coverage Results" MODIFIED="1719022249297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GameAssetsTools$import_hairs.coverage" NAME="import_hairs Coverage Results" MODIFIED="1719729137081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/GameAssetsTools$test.coverage" NAME="test Coverage Results" MODIFIED="1751808177704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finance" />
+    <SUITE FILE_PATH="coverage/GameAssetsTools$image_search.coverage" NAME="image_search Coverage Results" MODIFIED="1719401018517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/widgets" />
+    <SUITE FILE_PATH="coverage/GameAssetsTools$bao_download.coverage" NAME="bao_download Coverage Results" MODIFIED="1751796991546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finance" />
+    <SUITE FILE_PATH="coverage/GameAssetsTools$game_assets_dao.coverage" NAME="game_assets_dao Coverage Results" MODIFIED="1703902729001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
