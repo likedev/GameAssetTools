@@ -6,13 +6,13 @@ import time
 import adata
 import pandas as pd
 import numpy as np
-# adata.proxy(is_proxy=True, ip='127.0.0.1:7890')
 
-#
-# import os
-#
-# os.environ['http_proxy'] = 'http://127.0.0.1:7890'
-# os.environ['https_proxy'] = 'http://127.0.0.1:7890'
+adata.proxy(is_proxy=True, ip='127.0.0.1:7890')
+
+import os
+
+os.environ['http_proxy'] = 'http://127.0.0.1:7890'
+os.environ['https_proxy'] = 'http://127.0.0.1:7890'
 
 # --- 数据库配置 ---
 # 请根据您的MySQL服务器信息修改以下配置
@@ -89,7 +89,7 @@ def store_historical_data():
     获取所有A股近3年的前复权历史数据，并存入 stock_historical_price 表。
     此函数为增量更新，只会获取缺失的数据。
     """
-    table_name = 'stock'
+    table_name = 'stock_historical_price'
     print(f"\n--- 开始处理历史K线数据（最近3年） ---")
 
     # 1. 获取所有A股代码列表
@@ -101,8 +101,8 @@ def store_historical_data():
         return
 
     # 2. 确定需要获取数据的时间范围
-    end_date = datetime.date.today().strftime('%Y%m%d')
-    end_date = datetime.date.today().strftime('2025-07-04')
+    # end_date = datetime.date.today().strftime('%Y%m%d')
+    end_date = datetime.date.today().strftime('2025-09-30')
     start_date = (datetime.date.today() - datetime.timedelta(days=3 * 365)).strftime('%Y%m%d')
 
     # 3. 遍历每支股票，获取并存储历史数据
@@ -134,7 +134,7 @@ def store_historical_data():
 
         try:
             # 礼貌地暂停一下，避免对服务器造成过大压力
-            time.sleep(2)
+            time.sleep(1)
 
             # 使用新的 adata 接口获取日K线数据
             res_df = adata.stock.market.get_market(stock_code=stock_code, k_type=1, start_date=update_start_date)
@@ -142,7 +142,8 @@ def store_historical_data():
             # 检查是否成功获取数据
             if res_df.empty:
                 print(f"未能获取到 {stock_code} {stock_name} 的历史数据。")
-                continue
+                break
+                # continue
 
             # --- 数据转换与计算 (在原始 DataFrame 上一次性完成) ---
 
@@ -201,9 +202,7 @@ def store_historical_data():
 
 # --- 主程序入口 ---
 if __name__ == "__main__":
-    store_daily_snapshot()
+    # store_daily_snapshot()
 
     # # 2. 存储或更新历史K线数据
-    # # 注意：首次运行此函数会非常耗时，因为它需要下载所有股票近3年的数据。
-    # # 后续运行时，它只会增量更新，速度会快很多。
-    # store_historical_data()
+    store_historical_data()

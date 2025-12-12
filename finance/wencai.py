@@ -11,10 +11,10 @@ import stock_db
 
 ck = 'other_uid=Ths_iwencai_Xuangu_ukukt2s9hz6qjynuona9txk5xh5d85sz; ta_random_userid=nt7n2zc4nr; cid=efd8e78112fc993a4a1509237fdbadc11748144707; cid=efd8e78112fc993a4a1509237fdbadc11748144707; ComputerID=efd8e78112fc993a4a1509237fdbadc11748144707; WafStatus=0; user=MDpteF81MzcxNzM3OTI6Ok5vbmU6NTAwOjU0NzE3Mzc5Mjo3LDExMTExMTExMTExLDQwOzQ0LDExLDQwOzYsMSw0MDs1LDEsNDA7MSwxMDEsNDA7MiwxLDQwOzMsMSw0MDs1LDEsNDA7OCwwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMSw0MDsxMDIsMSw0MDoxNjo6OjUzNzE3Mzc5MjoxNzUzMDIxNzIyOjo6MTU5NjQxODY4MDoyNjc4NDAwOjA6MTg4YWI2MGUxMTllOTFmOGQwMWRhNjUwZWQwMjUyMTA4OmRlZmF1bHRfNTow; userid=537173792; u_name=mx_537173792; escapename=mx_537173792; ticket=f2e19b8e04b80a100c2180c1e520863b; user_status=0; utk=4b2a9a539d04264405999b849aff38b6; PHPSESSID=d910fafa1b058790e09fb71842b12da9; v=AxqdX_WHJp39dqox6w7I1sbsa8s5S54lEM8SySSTxq14l7T1DNvuNeBfYtj3'
 
-query_condition = '趋势股，3日内未涨停,收盘价小于100，成交额>1亿，周线周期均线上移，月线周期均线上移，无风险警示,非房地产板块'
+query_condition = '趋势股，3日内未涨停,收盘价小于100，周线周期均线上移，月线周期均线上移，无风险警示,非房地产板块'
 sort_param = ''
 
-task_name = '晚'
+task_name = '上午盘中'
 
 # 忽略 future warning
 warnings.simplefilter(action='ignore', category=FutureWarning)
